@@ -7,7 +7,7 @@ import { Task, Note } from '../../services/app-data';
   standalone: true,
   imports: [CommonModule],   
   templateUrl: './item-detail.html',
-  styleUrl: './item-detail.scss',
+  styleUrls: ['./item-detail.scss'],
 
 })
 export class ItemDetail {

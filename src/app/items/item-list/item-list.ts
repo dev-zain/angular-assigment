@@ -8,7 +8,7 @@ import { ItemDetail } from '../item-detail/item-detail';
   standalone: true,
   imports: [CommonModule, ItemDetail], 
   templateUrl: './item-list.html',
-  styleUrl: './item-list.scss',
+  styleUrls: ['./item-list.scss'],
 
 })
 export class ItemList {
