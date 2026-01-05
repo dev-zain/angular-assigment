@@ -1,0 +1,54 @@
+<section class="login">
+  <h2>Login</h2>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        email
+        [(ngModel)]="model.email"
+        #emailCtrl="ngModel"
+      />
+      <div class="error" *ngIf="emailCtrl.invalid && emailCtrl.touched">
+        Email is required and must be valid.
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        required
+        minlength="4"
+        [(ngModel)]="model.password"
+        #pwCtrl="ngModel"
+      />
+      <div class="error" *ngIf="pwCtrl.invalid && pwCtrl.touched">
+        Password is required (min 4 chars).
+      </div>
+    </div>
+
+    <div class="field checkbox">
+      <label>
+        <input
+          type="checkbox"
+          name="remember"
+          [(ngModel)]="model.remember"
+        />
+        Remember me
+      </label>
+    </div>
+
+    <button type="submit" [disabled]="f.invalid">Login</button>
+
+    <p class="ok" *ngIf="submitted">
+      ✅ Login submitted (demo)
+    </p>
+  </form>
+</section>

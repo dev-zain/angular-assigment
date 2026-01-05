@@ -1,0 +1,16 @@
+<!-- TASK -->
+<div class="item item--task" *ngIf="item.type === 'task'">
+  <span class="item__icon">📝</span>
+  <span class="item__label">Task:</span>
+  <span class="item__text">{{ item.title }}</span>
+
+  <span class="item__status item__status--done" *ngIf="item.done">✅</span>
+  <span class="item__status item__status--open" *ngIf="!item.done">❌</span>
+</div>
+
+<!-- NOTE -->
+<div class="item item--note" *ngIf="item.type === 'note'">
+  <span class="item__icon">📌</span>
+  <span class="item__label">Note:</span>
+  <span class="item__text">{{ item.text }}</span>
+</div>

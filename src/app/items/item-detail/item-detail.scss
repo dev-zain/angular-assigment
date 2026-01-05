@@ -1,0 +1,45 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.item__icon {
+  width: 22px;
+  text-align: center;
+}
+
+.item__label {
+  font-weight: 700;
+}
+
+.item__text {
+  flex: 1;
+}
+
+.item--task {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.item--note {
+  background: #fffdf3;
+  border: 1px solid #f1e7b8;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.item__status {
+  font-weight: 700;
+}
+
+.item__status--done {
+  opacity: 0.9;
+}
+
+.item__status--open {
+  opacity: 0.9;
+}

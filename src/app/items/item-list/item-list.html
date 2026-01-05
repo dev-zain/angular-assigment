@@ -1,0 +1,9 @@
+<section class="items">
+  <h2 class="items__title">My Items</h2>
+
+  <ul class="items__list">
+    <li class="items__row" *ngFor="let item of items">
+      <app-item-detail [item]="item"></app-item-detail>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,20 @@
+<h2>My Profile</h2>
+
+<p><b>App title (from service):</b> {{ data.title }}</p>
+<p><b>Semester:</b> {{ data.semester }}</p>
+<p><b>Status:</b> {{ data.isActive ? 'Active' : 'Inactive' }}</p>
+
+<hr />
+
+<p><b>Student:</b> {{ data.student.fullName() }}</p>
+<p><b>Current credits:</b> {{ data.student.credits }}</p>
+<p><b>Credits next semester:</b> {{ data.creditsNextSemester() }}</p>
+
+<hr />
+
+<p><b>Grades:</b> {{ data.grades }}</p>
+<p><b>Average grade:</b> {{ data.averageGrade() }}</p>
+
+<hr />
+<app-item-list></app-item-list>
+
