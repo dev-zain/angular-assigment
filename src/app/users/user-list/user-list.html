@@ -1,0 +1,32 @@
+<section class="users">
+  <h2>Users from API</h2>
+
+  <div class="loading" *ngIf="loading">
+    <p>⏳ Loading users...</p>
+  </div>
+
+  <div class="error" *ngIf="error">
+    <p>❌ {{ error }}</p>
+  </div>
+
+  <div class="user-grid" *ngIf="!loading && !error">
+    <div class="user-card" *ngFor="let user of users">
+      <div class="user-card__header">
+        <h3>{{ user.name }}</h3>
+        <span class="user-card__username">@{{ user.username }}</span>
+      </div>
+
+      <div class="user-card__body">
+        <p><strong>📧 Email:</strong> {{ user.email }}</p>
+        <p><strong>📞 Phone:</strong> {{ user.phone }}</p>
+        <p><strong>🌐 Website:</strong> {{ user.website }}</p>
+        <p><strong>🏙️ City:</strong> {{ user.address.city }}</p>
+        <p><strong>🏢 Company:</strong> {{ user.company.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="count" *ngIf="!loading && !error">
+    Total users loaded: <strong>{{ users.length }}</strong>
+  </p>
+</section>

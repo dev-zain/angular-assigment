@@ -1,0 +1,69 @@
+.users {
+  padding: 16px;
+}
+
+.loading, .error {
+  text-align: center;
+  padding:  20px;
+  font-size: 1.2em;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin:  20px 0;
+}
+
+.user-card {
+  border: 1px solid #ddd;
+  border-radius:  8px;
+  padding:  16px;
+  background:  #fafafa;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.user-card__header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+
+  h3 {
+    margin: 0 0 4px 0;
+    color: #333;
+  }
+}
+
+.user-card_username {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.user-card__body {
+  p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+
+    strong {
+      color: #555;
+    }
+  }
+}
+
+.count {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
